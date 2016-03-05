@@ -137,7 +137,6 @@ public class AlarmActivity extends BaseActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        String url;
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
@@ -176,16 +175,6 @@ public class AlarmActivity extends BaseActivity
                 Intent newAlarmIntent = new Intent(this, AlarmPreferencesActivity.class);
                 startActivity(newAlarmIntent);
                 break;
-            case R.id.menu_item_rate:
-                url = "market://details?id=" + getPackageName();
-                intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(url));
-                try {
-                    startActivity(intent);
-                } catch (ActivityNotFoundException e) {
-                    Toast.makeText(this, "Невозможно перейти в Play Маркет", Toast.LENGTH_LONG).show();
-                }
-                break;
         }
 
 
@@ -197,7 +186,7 @@ public class AlarmActivity extends BaseActivity
         // Inflate the menu; this adds items to the action bar if it is present.
         boolean result = super.onCreateOptionsMenu(menu);
         menu.findItem(R.id.menu_item_save).setVisible(false);
-        return true;
+        return result;
     }
 
     @SuppressWarnings("StatementWithEmptyBody")

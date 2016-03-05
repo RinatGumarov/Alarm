@@ -43,22 +43,10 @@ public abstract class BaseActivity  extends AppCompatActivity implements android
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        String url;
-        Intent intent;
         switch (item.getItemId()) {
             case R.id.menu_item_new:
                 Intent newAlarmIntent = new Intent(this, AlarmPreferencesActivity.class);
                 startActivity(newAlarmIntent);
-                break;
-            case R.id.menu_item_rate:
-                url = "market://details?id=" + getPackageName();
-                intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(url));
-                try {
-                    startActivity(intent);
-                } catch (ActivityNotFoundException e) {
-                    Toast.makeText(this, "Невозможно перейти в Play Маркет", Toast.LENGTH_LONG).show();
-                }
                 break;
         }
         return super.onOptionsItemSelected(item);

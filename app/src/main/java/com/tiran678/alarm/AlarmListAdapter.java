@@ -4,9 +4,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.CheckBox;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import com.tiran678.alarm.Alarm;
+import com.tiran678.alarm.AlarmActivity;
+import com.tiran678.alarm.Database;
 import com.tiran678.hardcorealarm.R;
 
 import java.util.ArrayList;

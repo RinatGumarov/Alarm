@@ -48,7 +48,7 @@ public class AlarmAlertActivity extends Activity implements View.OnClickListener
         this.setTitle(alarm.getAlarmName());
 
         problemView = (TextView) findViewById(R.id.text_wake_up);
-        problemView.setText("Пора вставать!");
+        problemView.setText(getResources().getText(R.string.alarm_alert_text));
 
 
         ((Button) findViewById(R.id.button_turn_off)).setOnClickListener(this);

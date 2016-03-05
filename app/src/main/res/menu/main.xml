@@ -26,12 +26,6 @@
     </item>
 
     <item
-        android:id="@+id/menu_item_rate"
-        android:title="@string/rate"
-        android:icon="@drawable/ic_stars_black">
-    </item>
-
-    <item
         android:id="@+id/menu_item_new"
         android:title="@string/add"
         android:icon="@drawable/ic_plus_alarm"
