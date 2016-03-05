@@ -244,27 +244,28 @@ public class Alarm implements Serializable, Comparable<Alarm>{
         long seconds = timeDifference / (1000) - (days * 24 * 60 * 60) - (hours * 60 * 60) - (minutes * 60);
         String alert = "Будильник прозвенит через ";
         String sDays = "";
-        if (days % 10 == 1)    sDays = String.format("%d день", days);
-        else if(days % 10 > 4) sDays = String.format("%d дней", days);
-        else                   sDays = String.format("%d дня", days);
+        if(days % 10 > 4 || (days > 10 && days <15))
+                                    sDays = String.format("%d дней", days);
+        else if (days % 10 == 1)    sDays = String.format("%d день", days);
+        else                        sDays = String.format("%d дня", days);
 
         String sHours = "";
-        if (hours % 10 == 1)    sHours = String.format("%d час", hours);
-        else if(hours % 10 > 4 || days % 10 == 0)
-                               sHours = String.format("%d часов", hours);
-        else                   sHours = String.format("%d часа", hours);
+        if(hours % 10 > 4 || days % 10 == 0 || (hours > 10 && hours < 15))
+                                    sHours = String.format("%d часов", hours);
+        else if (hours % 10 == 1)   sHours = String.format("%d час", hours);
+        else                        sHours = String.format("%d часа", hours);
 
         String sMins = "";
-        if (minutes % 10 == 1)    sMins = String.format("%d минуту и", minutes);
-        else if(minutes % 10 > 4 || minutes % 10 == 0)
-                                  sMins = String.format("%d минут и", minutes);
-        else                      sMins = String.format("%d минуты и", minutes);
+        if(minutes % 10 > 4 || minutes % 10 == 0 || (minutes > 10 && minutes < 15))
+                                   sMins = String.format("%d минут и", minutes);
+        else if (minutes % 10 == 1)sMins = String.format("%d минуту и", minutes);
+        else                       sMins = String.format("%d минуты и", minutes);
 
         String sSecs = "";
-        if (seconds % 10 == 1)    sSecs = String.format("%d секунду", seconds);
-        else if(seconds % 10 > 4 || seconds % 10 == 0)
-                                  sSecs = String.format("%d секунд", seconds);
-        else                      sSecs = String.format("%d секунды", seconds);
+        if(seconds % 10 > 4 || seconds % 10 == 0 || (seconds > 10 && seconds < 15))
+                                              sSecs = String.format("%d секунд", seconds);
+        else if (seconds % 10 == 1)           sSecs = String.format("%d секунду", seconds);
+        else                                  sSecs = String.format("%d секунды", seconds);
 
 
         if (days > 0)            alert += (sDays + " " + sHours + " " + sMins + " " + sSecs);
