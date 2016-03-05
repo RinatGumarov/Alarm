@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:appcompat="http://schemas.android.com/tools">
+
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        android:icon="@drawable/ic_settings_black"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_item_delete"
+        android:title="@string/cancel"
+        android:icon="@drawable/ic_delete"
+        appcompat:showAsAction="always">
+    </item>
+
+    <item
+        android:id="@+id/menu_item_save"
+        android:title="@string/save"
+        android:icon="@drawable/ic_check_circle_black"
+        appcompat:showAsAction="ifRoom">
+    </item>
+
+    <item
+        android:id="@+id/menu_item_rate"
+        android:title="@string/rate"
+        android:icon="@drawable/ic_stars_black">
+    </item>
+
+    <item
+        android:id="@+id/menu_item_new"
+        android:title="@string/add"
+        android:icon="@drawable/ic_plus_alarm"
+        appcompat:showAsAction="ifRoom">
+    </item>
+</menu>

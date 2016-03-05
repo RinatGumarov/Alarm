@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorGray"
+    tools:context="com.tiran678.alarm.AlarmPreferencesActivity">
+
+    <include layout="@layout/alarm_preferences" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_preference"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        app:rippleColor="@color/colorBreeze"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_check_circle_black" />
+
+</android.support.design.widget.CoordinatorLayout>
