@@ -206,15 +206,9 @@ public class Alarm implements Serializable, Comparable<Alarm>{
         }else if (days.length == 2 && days[1].equals(Day.SATURDAY) && days[0].equals(Day.SUNDAY)) { // 2 выходней
             daysStringBuilder.append("По выходным");
         }else{
-            for(Day d : getDays()){switch(d){
-				case TUESDAY:
-				case THURSDAY:
-//					daysStringBuilder.append(d.toString().substring(0, 4));
-//					break;
-                default:
-                    daysStringBuilder.append(d.toString().substring(0, 3));
-                    break;
-            }		daysStringBuilder.append(',');
+            for(Day d : getDays()){
+                daysStringBuilder.append(d.toString().substring(0, 3));
+                daysStringBuilder.append(',');
             }
             daysStringBuilder.setLength(daysStringBuilder.length()-1);
         }
