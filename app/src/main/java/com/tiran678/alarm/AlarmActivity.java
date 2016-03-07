@@ -1,14 +1,11 @@
 package com.tiran678.alarm;
 
-import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
-import android.support.v7.widget.AppCompatImageView;
 import android.view.HapticFeedbackConstants;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -137,16 +134,15 @@ public class AlarmActivity extends BaseActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
+//        int id = item.getItemId();
+//
+//        //noinspection SimplifiableIfStatement
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        Intent intent;
         switch (item.getItemId()) {
-            case R.id.menu_item_delete:
+            case R.id.action_delete:
                 Builder dialog = new AlertDialog.Builder(AlarmActivity.this);
                 dialog.setTitle("Delete");
                 dialog.setMessage("Delete all alarms?");
@@ -175,6 +171,7 @@ public class AlarmActivity extends BaseActivity
                 Intent newAlarmIntent = new Intent(this, AlarmPreferencesActivity.class);
                 startActivity(newAlarmIntent);
                 break;
+            default:break;
         }
 
 

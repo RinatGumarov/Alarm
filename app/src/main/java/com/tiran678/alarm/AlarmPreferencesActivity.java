@@ -274,7 +274,7 @@ public class AlarmPreferencesActivity extends BaseActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         boolean result = super.onCreateOptionsMenu(menu);
         menu.findItem(R.id.menu_item_new).setVisible(false); //// изменено
-        menu.findItem(R.id.menu_item_delete).setTitle("Delete");
+        menu.findItem(R.id.action_delete).setTitle("Delete");
         return result;
     }
 
@@ -292,7 +292,7 @@ public class AlarmPreferencesActivity extends BaseActivity {
                 Toast.makeText(AlarmPreferencesActivity.this, getAlarm().getTimeUntilNextAlarmMessage(), Toast.LENGTH_LONG).show();
                 finish();
                 break;
-            case R.id.menu_item_delete:
+            case R.id.action_delete:
                 AlertDialog.Builder dialog = new AlertDialog.Builder(AlarmPreferencesActivity.this);
                 dialog.setTitle("Delete");
                 dialog.setMessage("Delete this alarm?");
