@@ -20,20 +20,18 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e0d3f7e-4b21-45b1-9a04-3a544931248a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/Alarm.kt" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/Alarm.java" afterPath="" />
+    <list default="true" id="6e0d3f7e-4b21-45b1-9a04-3a544931248a" name="Default" comment="AlarmListAdapter translated to kt">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmListAdapter.kt" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmListAdapter.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmAlertActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmAlertActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmPreference.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmPreference.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmPreferenceListAdapter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmPreferenceListAdapter.kt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmService.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmService.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/Alarm.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/Alarm.kt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmPreferencesActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmPreferencesActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/alarm_list_element.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/alarm_list_element.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
     </list>
     <ignored path="Alarm.iws" />
@@ -62,61 +60,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="misc.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modules.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="runConfigurations.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/runConfigurations.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
-              <folding>
-                <marker date="1457552051000" expanded="true" signature="59:208914" placeholder="..." />
-                <marker date="1457552051000" expanded="true" signature="95:444" placeholder="..." />
-                <marker date="1457552051000" expanded="true" signature="108:224" placeholder="..." />
-                <marker date="1457552051000" expanded="true" signature="123:210" placeholder="..." />
-                <marker date="1457552051000" expanded="true" signature="141:194" placeholder="..." />
-                <marker date="1457552051000" expanded="true" signature="238:429" placeholder="..." />
-                <marker date="1457552051000" expanded="true" signature="339:398" placeholder="..." />
-                <marker date="1457552051000" expanded="true" signature="483:589" placeholder="..." />
-                <marker date="1457552051000" expanded="true" signature="628:744" placeholder="..." />
-                <marker date="1457552051000" expanded="true" signature="722:744" placeholder="..." />
-                <marker date="1457552051000" expanded="true" signature="208109:208126" placeholder="..." />
-                <marker date="1457552051000" expanded="true" signature="208109:208144" placeholder="..." />
-                <marker date="1457552051000" expanded="true" signature="208109:208157" placeholder="..." />
-                <marker date="1457552051000" expanded="true" signature="208109:208172" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AlarmPreference.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmPreference.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -127,11 +70,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Alarm.kt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Alarm.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/Alarm.kt">
           <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.39105058">
+              <caret line="131" column="23" selection-start-line="131" selection-start-column="23" selection-end-line="131" selection-end-column="23" />
+              <folding>
+                <element signature="e#28#383#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AlarmPreferencesActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmPreferencesActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+              <caret line="138" column="70" selection-start-line="138" selection-start-column="70" selection-end-line="138" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -147,23 +102,56 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ic_radio_button_unchecked_green.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_radio_button_unchecked_green.xml">
+      <file leaf-file-name="AlarmAlertBroadcastReceiver.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmAlertBroadcastReceiver.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ic_radio_button_unchecked_green.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_radio_button_unchecked_green.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AlarmService.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmService.kt">
+      <file leaf-file-name="AlarmListAdapter.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmListAdapter.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+              <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="alarm_list_element.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/alarm_list_element.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.3962264">
+              <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AlarmActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
               <folding>
-                <element signature="e#28#284#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1849,7 +1837,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tiran678/alarm/AlarmService.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tiran678/alarm/AlarmPreference.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tiran678/alarm/Alarm.kt" />
@@ -1859,7 +1846,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_radio_button_unchecked_black_24dp.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_radio_button_unchecked_green.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/alarm_list_element.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-w820dp/dimens.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
@@ -1873,13 +1859,11 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/tiran678/alarm/AlarmPreferencesActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tiran678/alarm/Database.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tiran678/alarm/Alarm.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmPreferencesActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmAlertBroadcastReciever.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmAlertBroadcastReceiver.kt" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmServiceBroadcastReceiver.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmListAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/preference_main.xml" />
         <option value="$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v23/values-v23.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml" />
@@ -1898,8 +1882,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/Alarm.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmService.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmPreferenceListAdapter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/Alarm.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmAlertActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmListAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmListAdapter.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmPreferencesActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/alarm_list_element.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/Alarm.kt" />
       </list>
     </option>
   </component>
@@ -2592,7 +2580,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2600,28 +2588,28 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36600497" sideWeight="0.4899857" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280116" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36600497" sideWeight="0.4899857" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39912918" sideWeight="0.50572246" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280116" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32754344" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280116" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32754344" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946298" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24248926" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39826304" sideWeight="0.49427754" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280116" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39912918" sideWeight="0.49427754" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -2637,7 +2625,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="SDate format unite" />
-    <option name="LAST_COMMIT_MESSAGE" value="SDate format unite" />
+    <MESSAGE value="AlarmListAdapter translated to kt" />
+    <option name="LAST_COMMIT_MESSAGE" value="AlarmListAdapter translated to kt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2646,18 +2635,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/PhoneStateChangedBroadcastReceiver.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17730497">
           <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="MultiMarkdownFxPreviewEditor">
@@ -2667,6 +2649,7 @@
         <state split_layout="FIRST">
           <first_editor vertical-scroll-proportion="0.09063444">
             <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -2716,6 +2699,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2832,7 +2816,7 @@
         <state vertical-scroll-proportion="-4.740741">
           <caret line="2445" column="34" selection-start-line="2445" selection-start-column="34" selection-end-line="2445" selection-end-column="34" />
           <folding>
-            <marker date="1457551579000" expanded="true" signature="116871:116963" placeholder="{...}" />
+            <marker date="1457554472000" expanded="true" signature="116871:116963" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -2886,46 +2870,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="47" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmAlertBroadcastReceiver.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-          <folding>
-            <element signature="e#28#129#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmPreferencesActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="350" column="17" selection-start-line="350" selection-start-column="17" selection-end-line="350" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3028,31 +2972,23 @@
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
           <folding>
-            <marker date="1457552051000" expanded="true" signature="59:208914" placeholder="..." />
-            <marker date="1457552051000" expanded="true" signature="95:444" placeholder="..." />
-            <marker date="1457552051000" expanded="true" signature="108:224" placeholder="..." />
-            <marker date="1457552051000" expanded="true" signature="123:210" placeholder="..." />
-            <marker date="1457552051000" expanded="true" signature="141:194" placeholder="..." />
-            <marker date="1457552051000" expanded="true" signature="238:429" placeholder="..." />
-            <marker date="1457552051000" expanded="true" signature="339:398" placeholder="..." />
-            <marker date="1457552051000" expanded="true" signature="483:589" placeholder="..." />
-            <marker date="1457552051000" expanded="true" signature="628:744" placeholder="..." />
-            <marker date="1457552051000" expanded="true" signature="722:744" placeholder="..." />
-            <marker date="1457552051000" expanded="true" signature="208109:208126" placeholder="..." />
-            <marker date="1457552051000" expanded="true" signature="208109:208144" placeholder="..." />
-            <marker date="1457552051000" expanded="true" signature="208109:208157" placeholder="..." />
-            <marker date="1457552051000" expanded="true" signature="208109:208172" placeholder="..." />
+            <marker date="1457554301000" expanded="true" signature="59:207231" placeholder="..." />
+            <marker date="1457554301000" expanded="true" signature="95:444" placeholder="..." />
+            <marker date="1457554301000" expanded="true" signature="108:224" placeholder="..." />
+            <marker date="1457554301000" expanded="true" signature="123:210" placeholder="..." />
+            <marker date="1457554301000" expanded="true" signature="141:194" placeholder="..." />
+            <marker date="1457554301000" expanded="true" signature="238:429" placeholder="..." />
+            <marker date="1457554301000" expanded="true" signature="322:414" placeholder="..." />
+            <marker date="1457554301000" expanded="true" signature="339:398" placeholder="..." />
+            <marker date="1457554301000" expanded="true" signature="483:589" placeholder="..." />
+            <marker date="1457554301000" expanded="true" signature="628:721" placeholder="..." />
+            <marker date="1457554301000" expanded="true" signature="206426:206443" placeholder="..." />
+            <marker date="1457554301000" expanded="true" signature="206426:206461" placeholder="..." />
+            <marker date="1457554301000" expanded="true" signature="206426:206474" placeholder="..." />
+            <marker date="1457554301000" expanded="true" signature="206426:206489" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmPreference.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3076,11 +3012,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/Alarm.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_radio_button_unchecked_green.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+          <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmAlertBroadcastReceiver.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmPreference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3092,11 +3054,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_radio_button_unchecked_green.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmListAdapter.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
+          <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/alarm_list_element.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.3962264">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/AlarmPreferencesActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="138" column="70" selection-start-line="138" selection-start-column="70" selection-end-line="138" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rinat678/alarm/Alarm.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39105058">
+          <caret line="131" column="23" selection-start-line="131" selection-start-column="23" selection-end-line="131" selection-end-column="23" />
+          <folding>
+            <element signature="e#28#383#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

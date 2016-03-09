@@ -6,12 +6,10 @@ import android.content.Context
 import android.content.Intent
 import android.media.RingtoneManager
 import java.io.Serializable
-import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.Arrays
 import java.util.Calendar
 import java.util.Collections
-import java.util.Comparator
 import java.util.LinkedList
 import java.util.Locale
 
@@ -27,10 +25,10 @@ class Alarm : Serializable, Comparable<Alarm> {
     var alarmName = "Alarm"
     var difficulty = Difficulty.EASY
 
-    override fun compareTo(another: Alarm): Int {
-        if (this.timeToCompare < another.timeToCompare)
+    override fun compareTo(other: Alarm): Int {
+        if (this.timeToCompare < other.timeToCompare)
             return -1
-        else if (this.timeToCompare == another.timeToCompare)
+        else if (this.timeToCompare == other.timeToCompare)
             return 0
         else
             return 1

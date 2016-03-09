@@ -135,7 +135,7 @@ public class AlarmPreferencesActivity extends BaseActivity {
                                 switch (alarmPreference.getKey()) {
                                     case ALARM_TONE:
                                         alarm.setAlarmTonePath(alarmPreferenceListAdapter.getAlarmTonePaths()[which]);
-                                        if (alarm.getAlarmTonePath() != null) {
+                                        if (!alarm.getAlarmTonePath().equals("")) {
                                             if (mediaPlayer == null) {
                                                 mediaPlayer = new MediaPlayer();
                                             } else {
