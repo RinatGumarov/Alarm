@@ -40,11 +40,11 @@ public class AlarmPreferencesActivity extends BaseActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Database.init(getApplicationContext());
+                Database.Companion.init(getApplicationContext());
                 if (getAlarm().getId() < 1) {
-                    Database.create(getAlarm());
+                    Database.Companion.create(getAlarm());
                 } else {
-                    Database.update(getAlarm());
+                    Database.Companion.update(getAlarm());
                 }
                 callAlarmScheduleService();
                 Toast.makeText(AlarmPreferencesActivity.this, getAlarm().getTimeUntilNextAlarmMessage(), Toast.LENGTH_LONG).show();
@@ -276,11 +276,11 @@ public class AlarmPreferencesActivity extends BaseActivity {
         switch (item.getItemId()) {
             case R.id.menu_item_save:
                 //TODO add more than one alarm at once
-                Database.init(getApplicationContext());
+                Database.Companion.init(getApplicationContext());
                 if (getAlarm().getId() < 1) {
-                    Database.create(getAlarm());
+                    Database.Companion.create(getAlarm());
                 } else {
-                    Database.update(getAlarm());
+                    Database.Companion.update(getAlarm());
                 }
                 callAlarmScheduleService();
                 Toast.makeText(AlarmPreferencesActivity.this, getAlarm().getTimeUntilNextAlarmMessage(), Toast.LENGTH_LONG).show();
@@ -295,9 +295,9 @@ public class AlarmPreferencesActivity extends BaseActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
-                        Database.init(getApplicationContext());
+                        Database.Companion.init(getApplicationContext());
                         if (getAlarm().getId() >= 1) {
-                            Database.deleteEntry(alarm);
+                            Database.Companion.deleteEntry(alarm);
                             callAlarmScheduleService();
                         }
                         finish();

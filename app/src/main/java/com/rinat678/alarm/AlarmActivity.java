@@ -70,8 +70,8 @@ public class AlarmActivity extends BaseActivity
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
-                        Database.init(AlarmActivity.this);
-                        Database.deleteEntry(alarm);
+                        Database.Companion.init(AlarmActivity.this);
+                        Database.Companion.deleteEntry(alarm);
                         AlarmActivity.this.callAlarmScheduleService();
 
                         updateAlarmList();
@@ -138,8 +138,8 @@ public class AlarmActivity extends BaseActivity
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
-                        Database.init(AlarmActivity.this);
-                        Database.deleteAll();
+                        Database.Companion.init(AlarmActivity.this);
+                        Database.Companion.deleteAll();
                         AlarmActivity.this.callAlarmScheduleService();
 
                         updateAlarmList();
@@ -177,7 +177,7 @@ public class AlarmActivity extends BaseActivity
     @Override
     protected void onPause() {
         // setListAdapter(null);
-        Database.deactivate();
+        Database.Companion.deactivate();
         super.onPause();
     }
 
@@ -188,8 +188,8 @@ public class AlarmActivity extends BaseActivity
     }
 
     private void updateAlarmList(){
-        Database.init(AlarmActivity.this);
-        final List<Alarm> alarms = Database.getAll();
+        Database.Companion.init(AlarmActivity.this);
+        final List<Alarm> alarms = Database.Companion.getAll();
         alarmListAdapter.setAlarms(alarms);
 
         runOnUiThread(new Runnable() {
@@ -211,7 +211,7 @@ public class AlarmActivity extends BaseActivity
             Switch aSwitch = (Switch) v;
             Alarm alarm = (Alarm) alarmListAdapter.getItem((Integer) aSwitch.getTag());
             alarm.setAlarmActive(aSwitch.isChecked());
-            Database.update(alarm);
+            Database.Companion.update(alarm);
             AlarmActivity.this.callAlarmScheduleService();
             if (aSwitch.isChecked()) {
                 Toast.makeText(AlarmActivity.this, alarm.getTimeUntilNextAlarmMessage(), Toast.LENGTH_LONG).show();

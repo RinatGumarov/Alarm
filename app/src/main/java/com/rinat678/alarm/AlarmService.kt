@@ -37,7 +37,7 @@ class AlarmService : Service() {
             })
 
             Database.init(applicationContext)
-            val alarms = Database.getAll()
+            val alarms = Database.all
 
             for (alarm in alarms) {
                 if (alarm.isAlarmActive)
