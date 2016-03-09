@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.tiran678.hardcorealarm">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.rinat678.alarm">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -13,10 +14,12 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:fullBackupContent="true"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name="com.tiran678.alarm.AlarmActivity"
+            android:name="com.rinat678.alarm.AlarmActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -26,35 +29,34 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.tiran678.alarm.AlarmPreferencesActivity"
+            android:name="com.rinat678.alarm.AlarmPreferencesActivity"
             android:label="@string/app_name"
-            android:parentActivityName="com.tiran678.alarm.AlarmActivity" >
+            android:parentActivityName="com.rinat678.alarm.AlarmActivity" >
             <!-- Parent activity meta-data to support API level 7+ -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.tiran678.alarm.AlarmActivity" />
+                android:value="com.rinat678.alarm.AlarmActivity" />
         </activity>
 
         <service
-            android:process="za.co.neilson.alarm.serviceProcess"
-            android:name="com.tiran678.alarm.AlarmService"
+            android:name="com.rinat678.alarm.AlarmService"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
             >
         </service>
-        <receiver android:name="com.tiran678.alarm.AlarmServiceBroadcastReciever" >
+        <receiver android:name="com.rinat678.alarm.AlarmServiceBroadcastReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
         <activity
-            android:name = "com.tiran678.alarm.AlarmAlertActivity"
+            android:name = "com.rinat678.alarm.AlarmAlertActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
         </activity>
-        <receiver android:name="com.tiran678.alarm.AlarmAlertBroadcastReciever" >
+        <receiver android:name="com.rinat678.alarm.AlarmAlertBroadcastReceiver" >
         </receiver>
-        <receiver android:name = "com.tiran678.alarm.PhoneStateChangedBroadcastReciever">
+        <receiver android:name = "com.rinat678.alarm.PhoneStateChangedBroadcastReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.PHONE_STATE" />
             </intent-filter>

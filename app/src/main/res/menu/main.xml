@@ -15,13 +15,13 @@
         android:id="@+id/menu_item_save"
         android:title="@string/save"
         android:icon="@drawable/ic_check_circle_black"
-        appcompat:showAsAction="ifRoom">
+        appcompat:showAsAction="never">
     </item>
 
     <item
         android:id="@+id/menu_item_new"
         android:title="@string/add"
         android:icon="@drawable/ic_plus_alarm"
-        appcompat:showAsAction="ifRoom">
+        appcompat:showAsAction="never">
     </item>
 </menu>

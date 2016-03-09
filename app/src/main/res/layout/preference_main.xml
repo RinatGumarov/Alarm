@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="@color/colorGray"
-    tools:context="com.tiran678.alarm.AlarmPreferencesActivity">
+    tools:context="com.rinat678.alarm.AlarmPreferencesActivity">
 
     <include layout="@layout/alarm_preferences" />
 
