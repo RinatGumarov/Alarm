@@ -1,9 +1,3 @@
-*.iml
-.gradle
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
-/build
 ### Android template
 # Built application files
 *.apk

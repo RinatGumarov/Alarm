@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/Rinat/AndroidStudioProjects/Alarm/app/build/intermediates/transforms/instantRunSlicer/debug/jars/1/1a/dependencies.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8ce1705970ad96c79e88428e770e2ffdf0eb5137">
+        <dex dex="/Users/Rinat/AndroidStudioProjects/Alarm/app/build/intermediates/transforms/dex/debug/folders/1000/1a/dependencies_134449e972feeac41016e87241d85e20882dbca3/classes.dex" />
+    </item>
+    <item
+        jar="/Users/Rinat/AndroidStudioProjects/Alarm/app/build/intermediates/transforms/instantRunSlicer/debug/jars/1/5/main_slice.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e1f43f0af374a32f78a45ad459e7239d9cc8ea2d">
+        <dex dex="/Users/Rinat/AndroidStudioProjects/Alarm/app/build/intermediates/transforms/dex/debug/folders/1000/5/main_slice_c0f140b832d424272c955485f8789c38affa1504/classes.dex" />
+    </item>
+
+</items>
