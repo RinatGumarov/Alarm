@@ -97,7 +97,7 @@ class AlarmPreferenceListAdapter(context: Context, alarm: Alarm) : BaseAdapter()
         this.alarm = alarm
         preferences.clear()
         preferences.add(AlarmPreference(AlarmPreference.Key.ALARM_NAME, "Надпись", alarm.alarmName, null, alarm.alarmName, AlarmPreference.Type.STRING))
-        preferences.add(AlarmPreference(AlarmPreference.Key.ALARM_TIME, "Установить время", alarm.alarmTimeString, null, alarm.alarmTime, AlarmPreference.Type.TIME))
+        preferences.add(AlarmPreference(AlarmPreference.Key.ALARM_TIME, "Установить время", alarm.alarmTimeString, null, alarm.getAlarmTime(), AlarmPreference.Type.TIME))
         preferences.add(AlarmPreference(AlarmPreference.Key.ALARM_REPEAT, "Повторять", alarm.repeatDaysString, repeatDays, alarm.days, AlarmPreference.Type.MULTIPLE_LIST))
 
         val alarmToneUri = Uri.parse(alarm.alarmTonePath)

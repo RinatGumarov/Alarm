@@ -52,6 +52,8 @@ public class AlarmAlertActivity extends Activity implements View.OnClickListener
         sb.setProgress(15);
         sb.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
+            private int counts = 0;
+
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
                 seekBar.setProgress(15);
@@ -73,11 +75,11 @@ public class AlarmAlertActivity extends Activity implements View.OnClickListener
                 if (progress >= 85) {
                     seekBar.setProgress(85);
                     seekBar.setThumb(getResources().getDrawable(R.drawable.ic_radio_button_unchecked_black_24dp));
-                    onClick(seekBar);
+                    if (counts++ == 0)
+                        AlarmAlertActivity.super.onBackPressed();
                 } else if (progress < 15) {
                     seekBar.setProgress(15);
                 }
-
             }
         });
 

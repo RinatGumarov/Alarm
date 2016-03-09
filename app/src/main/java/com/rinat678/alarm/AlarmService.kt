@@ -27,7 +27,7 @@ class AlarmService : Service() {
         get() {
             val alarmQueue = TreeSet(Comparator<com.rinat678.alarm.Alarm> { lhs, rhs ->
                 val result = 0
-                val diff = lhs.alarmTime.timeInMillis - rhs.alarmTime.timeInMillis
+                val diff = lhs.getAlarmTime().timeInMillis - rhs.getAlarmTime().timeInMillis
                 if (diff > 0) {
                     return@Comparator 1
                 } else if (diff < 0) {
