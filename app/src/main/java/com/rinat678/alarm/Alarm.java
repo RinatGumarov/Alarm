@@ -69,8 +69,7 @@ public class Alarm implements Serializable, Comparable<Alarm> {
     }
 
     public String getAlarmTimeString() {
-        DateFormat dateFormat = new SimpleDateFormat("H:mm", Locale.getDefault());
-        return dateFormat.format(alarmTime.getTime());
+        return new SimpleDateFormat("H:mm", Locale.getDefault()).format(alarmTime.getTime());
     }
 
     public void setAlarmTime(Calendar alarmTime) {
