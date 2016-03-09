@@ -8,12 +8,10 @@ public class AlarmPreference {
         ALARM_REPEAT,
         ALARM_TONE,
         ALARM_VIBRATE,
-        ALARM_DIFFICULTY
     }
 
     public enum Type{
         BOOLEAN,
-        INTEGER,
         STRING,
         LIST,
         MULTIPLE_LIST,

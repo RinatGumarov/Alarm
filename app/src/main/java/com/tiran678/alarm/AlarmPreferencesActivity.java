@@ -24,9 +24,6 @@ import java.util.Calendar;
 
 public class AlarmPreferencesActivity extends BaseActivity {
 
-    ImageButton deleteButton;
-    TextView okButton;
-    TextView cancelButton;
     private Alarm alarm;
     private MediaPlayer mediaPlayer;
 
@@ -281,7 +278,8 @@ public class AlarmPreferencesActivity extends BaseActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.menu_item_save://olololo
+            case R.id.menu_item_save:
+                //TODO add more than one alarm at once
                 Database.init(getApplicationContext());
                 if (getAlarm().getId() < 1) {
                     Database.create(getAlarm());

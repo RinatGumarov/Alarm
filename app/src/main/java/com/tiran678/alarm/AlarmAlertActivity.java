@@ -28,7 +28,7 @@ public class AlarmAlertActivity extends Activity implements View.OnClickListener
 
     private boolean alarmActive;
 
-    private TextView problemView;
+    private TextView text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,8 +47,8 @@ public class AlarmAlertActivity extends Activity implements View.OnClickListener
         assert alarm != null;
         this.setTitle(alarm.getAlarmName());
 
-        problemView = (TextView) findViewById(R.id.text_wake_up);
-        problemView.setText(getResources().getText(R.string.alarm_alert_text));
+        text = (TextView) findViewById(R.id.text_wake_up);
+        text.setText(getResources().getText(R.string.alarm_alert_text));
 
 
         ((Button) findViewById(R.id.button_turn_off)).setOnClickListener(this);

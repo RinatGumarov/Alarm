@@ -30,24 +30,6 @@ public class Alarm implements Serializable, Comparable<Alarm>{
         return Integer.parseInt(getAlarmTimeString().replace(':','0'));
     }
 
-    public enum Difficulty{
-        EASY,
-        MEDIUM,
-        HARD;
-
-        @Override
-        public String toString() {
-            switch(this.ordinal()){
-                case 0:
-                    return "Easy";
-                case 1:
-                    return "Medium";
-                case 2:
-                    return "Hard";
-            }
-            return super.toString();
-        }
-    }
 
     public enum Day{
         SUNDAY,
@@ -73,7 +55,6 @@ public class Alarm implements Serializable, Comparable<Alarm>{
         }
 
     }
-//    private static final long serialVersionUID = 8699489847426803789L;
     private int id;
     private boolean alarmActive = true;
     private Calendar alarmTime = Calendar.getInstance();
@@ -81,7 +62,6 @@ public class Alarm implements Serializable, Comparable<Alarm>{
     private String alarmTonePath = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM).toString();
     private boolean vibrate = true;
     private String alarmName = "Hardcore Alarm";
-    private Difficulty difficulty = Difficulty.EASY;
 
     public boolean isAlarmActive() {
         return alarmActive;
@@ -174,13 +154,6 @@ public class Alarm implements Serializable, Comparable<Alarm>{
         this.alarmName = alarmName;
     }
 
-    public Difficulty getDifficulty() {
-        return difficulty;
-    }
-
-    public void setDifficulty(Difficulty difficulty) {
-        this.difficulty = difficulty;
-    }
     public int getId() {
         return id;
     }

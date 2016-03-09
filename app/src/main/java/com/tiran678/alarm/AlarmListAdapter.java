@@ -69,25 +69,10 @@ public class AlarmListAdapter extends BaseAdapter {
 
     }
 
-//    @Override
-//    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-//        return null;
-//    }
-//
-//    @Override
-//    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-//
-//    }
-//
     @Override
     public long getItemId(int position) {
         return position;
     }
-//
-//    @Override
-//    public int getItemCount() {
-//        return 0;
-//    }
 
     public List<Alarm> getAlarms() {
         return alarms;

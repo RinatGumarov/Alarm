@@ -8,24 +8,24 @@ import android.os.Bundle
 class AlarmAlertBroadcastReciever : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
-        val mathAlarmServiceIntent = Intent(
+        val alarmServiceIntent = Intent(
                 context,
                 AlarmServiceBroadcastReciever::class.java)
-        context.sendBroadcast(mathAlarmServiceIntent, null)
+        context.sendBroadcast(alarmServiceIntent, null)
 
         StaticWakeLock.lockOn(context)
         val bundle = intent.extras
         val alarm = bundle.getSerializable("alarm") as Alarm?
 
-        val mathAlarmAlertActivityIntent: Intent
+        val alarmAlertActivityIntent: Intent
 
-        mathAlarmAlertActivityIntent = Intent(context, AlarmAlertActivity::class.java)
+        alarmAlertActivityIntent = Intent(context, AlarmAlertActivity::class.java)
 
-        mathAlarmAlertActivityIntent.putExtra("alarm", alarm)
+        alarmAlertActivityIntent.putExtra("alarm", alarm)
 
-        mathAlarmAlertActivityIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        alarmAlertActivityIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
 
-        context.startActivity(mathAlarmAlertActivityIntent)
+        context.startActivity(alarmAlertActivityIntent)
     }
 
 }
