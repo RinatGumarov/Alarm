@@ -8,7 +8,7 @@
     <string name="ololo">ololo</string>
     <string name="turn_off_alarm">Зачет</string>
     <string name="alarm_alert_text">Будильник</string>
-    <string name="cancel">Delete all</string>
+    <string name="delete">Delete all</string>
     <string name="save">Save</string>
     <string name="rate">Rate</string>
     <string name="add">Add</string>
