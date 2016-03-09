@@ -7,7 +7,6 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Vibrator;
-import android.support.design.widget.Snackbar;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 import android.util.Log;
@@ -15,7 +14,9 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.tiran678.hardcorealarm.R;
 public class AlarmAlertActivity extends Activity implements View.OnClickListener {
@@ -50,6 +51,44 @@ public class AlarmAlertActivity extends Activity implements View.OnClickListener
         text = (TextView) findViewById(R.id.text_wake_up);
         text.setText(getResources().getText(R.string.alarm_alert_text));
 
+        SeekBar sb = (SeekBar) findViewById(R.id.myseek);
+        sb.setProgress(15);
+        sb.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+                if (seekBar.getProgress() > 95) {
+
+                } else {
+
+                    seekBar.setThumb(getResources().getDrawable(R.drawable.ic_fiber));
+                }
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+
+            }
+
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress,
+                                          boolean fromUser) {
+                if (progress > 50)
+                    seekBar.setThumb(getResources().getDrawable(R.drawable.ic_radio_button_unchecked_green));
+                if(progress>=85){
+                    seekBar.setProgress(85);
+                    seekBar.setThumb(getResources().getDrawable(R.drawable.ic_radio_button_unchecked_black_24dp));
+                    onClick(seekBar);
+                }
+                else if(progress < 15){
+                    seekBar.setProgress(15);
+                }
+
+            }
+        });
 
         ((Button) findViewById(R.id.button_turn_off)).setOnClickListener(this);
 
@@ -163,7 +202,7 @@ public class AlarmAlertActivity extends Activity implements View.OnClickListener
 
     @Override
     public void onClick(View v) {
-        Snackbar.make(v, "Будильник выключен", Snackbar.LENGTH_INDEFINITE).show();
+        Toast.makeText(getApplicationContext(), "Будильник выключен", Toast.LENGTH_SHORT).show();
         super.onBackPressed();
     }
 }
