@@ -2,6 +2,7 @@ package com.rinat678.alarm;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -28,7 +29,8 @@ public abstract class BaseActivity  extends AppCompatActivity implements android
     }
 
     void callAlarmScheduleService() {
-        Intent mathAlarmServiceIntent = new Intent(this, AlarmServiceBroadcastReceiver.class);
-        sendBroadcast(mathAlarmServiceIntent, null);
+        Log.d(getClass().getSimpleName(), "callAlarmSheduleService");
+        Intent alarmServiceIntent = new Intent(this, AlarmServiceBroadcastReceiver.class);
+        sendBroadcast(alarmServiceIntent, null);
     }
 }

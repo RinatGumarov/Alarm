@@ -25,15 +25,14 @@ class AlarmService : Service() {
 
     private val next: Alarm?
         get() {
-            val alarmQueue = TreeSet(Comparator<com.rinat678.alarm.Alarm> { lhs, rhs ->
-                val result = 0
+            val alarmQueue = TreeSet(Comparator<Alarm> { lhs, rhs ->
                 val diff = lhs.getAlarmTime().timeInMillis - rhs.getAlarmTime().timeInMillis
                 if (diff > 0) {
                     return@Comparator 1
                 } else if (diff < 0) {
                     return@Comparator -1
                 }
-                result
+                0
             })
 
             Database.init(applicationContext)
@@ -63,7 +62,7 @@ class AlarmService : Service() {
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
         Log.d(this.javaClass.simpleName, "onStartCommand()")
         val alarm = next
-        if (null != alarm) {
+        if (alarm != null) {
             alarm.schedule(applicationContext)
             Log.d(this.javaClass.simpleName, alarm.timeUntilNextAlarmMessage)
 
