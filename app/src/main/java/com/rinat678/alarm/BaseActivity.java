@@ -29,7 +29,7 @@ public abstract class BaseActivity  extends AppCompatActivity implements android
     }
 
     void callAlarmScheduleService() {
-        Log.d(getClass().getSimpleName(), "callAlarmSheduleService");
+        Log.d(getClass().getSimpleName(), "callAlarmScheduleService");
         Intent alarmServiceIntent = new Intent(this, AlarmServiceBroadcastReceiver.class);
         sendBroadcast(alarmServiceIntent, null);
     }
