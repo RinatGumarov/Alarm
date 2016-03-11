@@ -8,7 +8,7 @@ import android.util.Log
 class AlarmServiceBroadcastReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
-        Log.d("AlarmServiceBroadcastReceiver", "onReceive()")
+        Log.d(this.javaClass.simpleName, "onReceive()")
         val serviceIntent = Intent(context, AlarmService::class.java)
         context.startService(serviceIntent)
     }
