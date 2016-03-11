@@ -5,6 +5,7 @@ import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
 
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
@@ -16,11 +17,13 @@ import java.util.ArrayList
 internal class Database private constructor(context: Context) : SQLiteOpenHelper(context, Database.DATABASE_NAME, null, Database.DATABASE_VERSION) {
 
     override fun onCreate(db: SQLiteDatabase) {
+        Log.d(this.javaClass.simpleName, "db created")
         // TODO Auto-generated method stub
         db.execSQL("CREATE TABLE IF NOT EXISTS $ALARM_TABLE ( $COLUMN_ALARM_ID INTEGER primary key autoincrement, $COLUMN_ALARM_ACTIVE INTEGER NOT NULL, $COLUMN_ALARM_TIME TEXT NOT NULL, $COLUMN_ALARM_DAYS BLOB NOT NULL, $COLUMN_ALARM_DIFFICULTY INTEGER NOT NULL, $COLUMN_ALARM_TONE TEXT NOT NULL, $COLUMN_ALARM_VIBRATE INTEGER NOT NULL, $COLUMN_ALARM_NAME TEXT NOT NULL)")
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
+        Log.d(this.javaClass.simpleName, "updated")
         db.execSQL("DROP TABLE IF EXISTS " + ALARM_TABLE)
         onCreate(db)
     }
@@ -56,7 +59,7 @@ internal class Database private constructor(context: Context) : SQLiteOpenHelper
         }
 
         fun deactivate() {
-            if (null != db && db!!.isOpen) {
+            if (db != null && db!!.isOpen) {
                 db!!.close()
             }
             db = null

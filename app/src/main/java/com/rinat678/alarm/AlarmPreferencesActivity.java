@@ -11,6 +11,7 @@ import android.os.CountDownTimer;
 import android.os.Vibrator;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.ActionBar;
+import android.util.Log;
 import android.view.HapticFeedbackConstants;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -29,6 +30,7 @@ public class AlarmPreferencesActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(getClass().getSimpleName(), "onCreate");
         super.onCreate(savedInstanceState);
         // requestWindowFeature(Window.FEATURE_NO_TITLE);
         ActionBar actionBar = getSupportActionBar();
@@ -54,9 +56,9 @@ public class AlarmPreferencesActivity extends BaseActivity {
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null && bundle.containsKey("alarm")) {
-            setMathAlarm((Alarm) bundle.getSerializable("alarm"));
+            setAlarm((Alarm) bundle.getSerializable("alarm"));
         } else {
-            setMathAlarm(new Alarm());
+            setAlarm(new Alarm());
         }
         if (bundle != null && bundle.containsKey("adapter")) {
             setListAdapter((AlarmPreferenceListAdapter) bundle.getSerializable("adapter"));
@@ -321,6 +323,7 @@ public class AlarmPreferencesActivity extends BaseActivity {
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
+        Log.d(getClass().getSimpleName(), "onSaveInstanceState");
         outState.putSerializable("alarm", getAlarm());
         outState.putSerializable("adapter", (AlarmPreferenceListAdapter) getListAdapter());
     }
@@ -340,7 +343,7 @@ public class AlarmPreferencesActivity extends BaseActivity {
         return alarm;
     }
 
-    private void setMathAlarm(Alarm alarm) {
+    private void setAlarm(Alarm alarm) {
         this.alarm = alarm;
     }
 
@@ -362,8 +365,6 @@ public class AlarmPreferencesActivity extends BaseActivity {
 
     @Override
     public void onClick(View v) {
-        // super.onClick(v);
-
     }
 }
 

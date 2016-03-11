@@ -3,10 +3,12 @@ package com.rinat678.alarm
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 
 class AlarmAlertBroadcastReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
+        Log.d(this.javaClass.simpleName, "onReceive")
         val alarmServiceIntent = Intent(
                 context,
                 AlarmServiceBroadcastReceiver::class.java)

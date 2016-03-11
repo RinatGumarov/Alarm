@@ -23,8 +23,7 @@ public abstract class BaseActivity  extends AppCompatActivity implements android
                 menuKeyField.setAccessible(true);
                 menuKeyField.setBoolean(config, false);
             }
-        } catch (Exception ex) {
-            // Ignore
+        } catch (Exception ignore) {
         }
     }
 

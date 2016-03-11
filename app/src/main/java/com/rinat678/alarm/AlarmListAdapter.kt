@@ -1,5 +1,6 @@
 package com.rinat678.alarm
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,6 +25,7 @@ internal class AlarmListAdapter(private val alarmActivity: AlarmActivity) : Base
 
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+        Log.d(this.javaClass.simpleName, "getView")
         var cv = convertView
         if (cv == null)
             cv = LayoutInflater.from(alarmActivity).inflate(

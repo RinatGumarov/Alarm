@@ -10,15 +10,13 @@ import android.os.Vibrator;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 import android.util.Log;
-import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-@SuppressWarnings("deprecation")
-public class AlarmAlertActivity extends Activity implements View.OnClickListener {
+public class AlarmAlertActivity extends Activity{
 
     private Alarm alarm;
 
@@ -30,6 +28,7 @@ public class AlarmAlertActivity extends Activity implements View.OnClickListener
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(getClass().getSimpleName(), "onCreate");
         super.onCreate(savedInstanceState);
         final Window window = getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
@@ -57,6 +56,7 @@ public class AlarmAlertActivity extends Activity implements View.OnClickListener
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
                 seekBar.setProgress(15);
+                //noinspection deprecation
                 seekBar.setThumb(getResources().getDrawable(R.drawable.ic_fiber));
 
             }
@@ -71,11 +71,14 @@ public class AlarmAlertActivity extends Activity implements View.OnClickListener
             public void onProgressChanged(SeekBar seekBar, int progress,
                                           boolean fromUser) {
                 if (progress > 50)
+                    //noinspection deprecation
                     seekBar.setThumb(getResources().getDrawable(R.drawable.ic_radio_button_unchecked_green));
                 if (progress >= 85) {
                     seekBar.setProgress(85);
+                    //noinspection deprecation
                     seekBar.setThumb(getResources().getDrawable(R.drawable.ic_radio_button_unchecked_black_24dp));
                     if (counts++ == 0)
+                        Toast.makeText(getApplicationContext(), "Будильник выключен", Toast.LENGTH_SHORT).show();
                         AlarmAlertActivity.super.onBackPressed();
                 } else if (progress < 15) {
                     seekBar.setProgress(15);
@@ -83,7 +86,6 @@ public class AlarmAlertActivity extends Activity implements View.OnClickListener
             }
         });
 
-        findViewById(R.id.button_turn_off).setOnClickListener(this);
 
         TelephonyManager telephonyManager = (TelephonyManager) this
                 .getSystemService(Context.TELEPHONY_SERVICE);
@@ -117,19 +119,19 @@ public class AlarmAlertActivity extends Activity implements View.OnClickListener
         telephonyManager.listen(phoneStateListener,
                 PhoneStateListener.LISTEN_CALL_STATE);
 
-        // Toast.makeText(this, answerString, Toast.LENGTH_LONG).show();
-
         startAlarm();
 
     }
 
     @Override
     protected void onResume() {
+        Log.d(getClass().getSimpleName(), "onResume");
         super.onResume();
         alarmActive = true;
     }
 
     private void startAlarm() {
+        Log.d(getClass().getSimpleName(), "startAlarm");
 
         if (!alarm.getAlarmTonePath().equals("")) {
             mediaPlayer = new MediaPlayer();
@@ -168,12 +170,14 @@ public class AlarmAlertActivity extends Activity implements View.OnClickListener
      */
     @Override
     protected void onPause() {
+        Log.d(getClass().getSimpleName(), "onPause");
         super.onPause();
         StaticWakeLock.INSTANCE.lockOff(this);
     }
 
     @Override
     protected void onDestroy() {
+        Log.d(getClass().getSimpleName(), "onDestroy");
         try {
             if (vibrator != null)
                 vibrator.cancel();
@@ -191,11 +195,5 @@ public class AlarmAlertActivity extends Activity implements View.OnClickListener
 
         }
         super.onDestroy();
-    }
-
-    @Override
-    public void onClick(View v) {
-        Toast.makeText(getApplicationContext(), "Будильник выключен", Toast.LENGTH_SHORT).show();
-        super.onBackPressed();
     }
 }

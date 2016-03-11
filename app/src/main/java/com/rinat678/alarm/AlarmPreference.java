@@ -1,5 +1,7 @@
 package com.rinat678.alarm;
 
+import android.util.Log;
+
 public class AlarmPreference {
 
     private Key key;
@@ -12,6 +14,7 @@ public class AlarmPreference {
         this(key, null, null, null, value, type);
     }
     public AlarmPreference(Key key, String title, String summary, String[] options, Object value, Type type) {
+        Log.d(getClass().getSimpleName(), "AlarmPreference");
         setTitle(title);
         setSummary(summary);
         setOptions(options);

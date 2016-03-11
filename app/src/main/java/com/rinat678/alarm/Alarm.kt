@@ -5,6 +5,7 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.media.RingtoneManager
+import android.util.Log
 import java.io.Serializable
 import java.text.SimpleDateFormat
 import java.util.Arrays
@@ -26,6 +27,7 @@ class Alarm : Serializable, Comparable<Alarm> {
     var difficulty = Difficulty.EASY
 
     override fun compareTo(other: Alarm): Int {
+        Log.d(this.javaClass.simpleName, "comparing")
         if (this.timeToCompare < other.timeToCompare)
             return -1
         else if (this.timeToCompare == other.timeToCompare)
@@ -38,6 +40,7 @@ class Alarm : Serializable, Comparable<Alarm> {
         get() = Integer.parseInt(alarmTimeString.replace(':', '0'))
 
     fun getAlarmTime(): Calendar {
+
         if (alarmTime.before(Calendar.getInstance()))
             alarmTime.add(Calendar.DAY_OF_MONTH, 1)
         while (!Arrays.asList(*days).contains(Day.values()[alarmTime.get(Calendar.DAY_OF_WEEK) - 1])) {

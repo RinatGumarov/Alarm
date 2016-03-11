@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
+import android.util.Log;
 import android.view.HapticFeedbackConstants;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
@@ -32,6 +33,7 @@ public class AlarmActivity extends BaseActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(this.getClass().getSimpleName(), "onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -129,6 +131,7 @@ public class AlarmActivity extends BaseActivity
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
+        Log.d(this.getClass().getSimpleName(), "options item selected");
         switch (item.getItemId()) {
             case R.id.action_delete:
                 Builder dialog = new AlertDialog.Builder(AlarmActivity.this);
@@ -168,6 +171,7 @@ public class AlarmActivity extends BaseActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        Log.d(getClass().getSimpleName(), "onCreate Options menu");
         // Inflate the menu; this adds items to the action bar if it is present.
         boolean result = super.onCreateOptionsMenu(menu);
         menu.findItem(R.id.menu_item_save).setVisible(false);
@@ -176,6 +180,7 @@ public class AlarmActivity extends BaseActivity
 
     @Override
     protected void onPause() {
+        Log.d(getClass().getSimpleName(), "onPause");
         // setListAdapter(null);
         Database.Companion.deactivate();
         super.onPause();
@@ -183,11 +188,13 @@ public class AlarmActivity extends BaseActivity
 
     @Override
     protected void onResume() {
+        Log.d(getClass().getSimpleName(), "onResume");
         super.onResume();
         updateAlarmList();
     }
 
     private void updateAlarmList(){
+        Log.d(getClass().getSimpleName(), "updateAlarmList");
         Database.Companion.init(AlarmActivity.this);
         final List<Alarm> alarms = Database.Companion.getAll();
         alarmListAdapter.setAlarms(alarms);
@@ -207,6 +214,7 @@ public class AlarmActivity extends BaseActivity
 
     @Override
     public void onClick(View v) {
+        Log.d(getClass().getSimpleName(), "onClick");
         if (v.getId() == R.id.checkBox_alarm_active) {
             Switch aSwitch = (Switch) v;
             Alarm alarm = (Alarm) alarmListAdapter.getItem((Integer) aSwitch.getTag());

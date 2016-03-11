@@ -9,7 +9,6 @@ class PhoneStateChangedBroadcastReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
         Log.d(javaClass.simpleName, "onReceive()")
-
     }
 
 }

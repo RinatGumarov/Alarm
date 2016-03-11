@@ -28,7 +28,7 @@ class AlarmPreferenceListAdapter(context: Context, alarm: Alarm) : BaseAdapter()
     init {
         this.context = context
 
-        Log.d("AlarmPreferenceListAda", "Loading Ringtones...")
+        Log.d(this.javaClass.simpleName, "Loading Ringtones...")
 
         val ringtoneMgr = RingtoneManager(context)
 
@@ -46,7 +46,7 @@ class AlarmPreferenceListAdapter(context: Context, alarm: Alarm) : BaseAdapter()
                 alarmTonePaths[alarmsCursor.position + 1] = ringtoneMgr.getRingtoneUri(alarmsCursor.position).toString()
             } while (alarmsCursor.moveToNext())
         }
-        Log.d("AlarmPreferenceListAda", "Finished Loading " + alarmTones.size + " Ringtones.")
+        Log.d(this.javaClass.simpleName, "Finished Loading " + alarmTones.size + " Ringtones.")
         alarmsCursor.close()
 
         setAlarm(alarm)
@@ -65,35 +65,36 @@ class AlarmPreferenceListAdapter(context: Context, alarm: Alarm) : BaseAdapter()
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        var convertView = convertView
+        var cv = convertView
         val alarmPreference = getItem(position) as AlarmPreference
         val layoutInflater = LayoutInflater.from(context)
         when (alarmPreference.type) {
             AlarmPreference.Type.BOOLEAN -> {
-                if (null == convertView)
-                    convertView = layoutInflater.inflate(android.R.layout.simple_list_item_checked, null)
+                if (null == cv)
+                    cv = layoutInflater.inflate(android.R.layout.simple_list_item_checked, null)
 
-                val checkedTextView = convertView!!.findViewById(android.R.id.text1) as CheckedTextView
+                val checkedTextView = cv!!.findViewById(android.R.id.text1) as CheckedTextView
                 checkedTextView.text = alarmPreference.title
                 checkedTextView.isChecked = alarmPreference.value as Boolean
             }
             else -> {
-                if (null == convertView)
-                    convertView = layoutInflater.inflate(android.R.layout.simple_list_item_2, null)
+                if (null == cv)
+                    cv = layoutInflater.inflate(android.R.layout.simple_list_item_2, null)
 
-                val text1 = convertView!!.findViewById(android.R.id.text1) as TextView
+                val text1 = cv!!.findViewById(android.R.id.text1) as TextView
                 text1.textSize = 18f
                 text1.text = alarmPreference.title
 
-                val text2 = convertView.findViewById(android.R.id.text2) as TextView
+                val text2 = cv.findViewById(android.R.id.text2) as TextView
                 text2.text = alarmPreference.summary
             }
         }
 
-        return convertView
+        return cv
     }
 
     fun setAlarm(alarm: Alarm) {
+        Log.d(this.javaClass.simpleName, "setAlarm")
         this.alarm = alarm
         preferences.clear()
         preferences.add(AlarmPreference(AlarmPreference.Key.ALARM_NAME, "Надпись", alarm.alarmName, null, alarm.alarmName, AlarmPreference.Type.STRING))
